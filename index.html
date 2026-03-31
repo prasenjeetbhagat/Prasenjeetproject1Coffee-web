@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Website | Coding Prasenjeet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="nav-logo">
+                <h2 class="logo-text">☕ Coffee</h2>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#menu" class="nav-link">Menu</a></li>
+                <li class="nav-item"><a href="#order" class="nav-link">Testimonials</a></li>
+                <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contacts</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section (Your exact structure) -->
+        <section id="home" class="hero-section">
+            <div class="section-content">
+                <div class="hero-details">
+                    <h2 class="title">Best Coffee</h2>   
+                    <h3 class="subtitle">Make your day great with our special coffee!</h3>
+                    <p class="description">Welcome to our coffee paradise, where every bean tells a story and every cup sparks joy.</p>
+                    
+                    <div class="buttons">
+                        <a href="#order" class="button order-now">Order Now</a>
+                        <a href="#contact" class="button contact-us">Contact Us</a>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <img src="coffee-hero-section.png" alt="Hero Coffee" class="hero-image">   
+                    <div class="coffee-steam"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section (Products Grid + Cart) -->
+        <section id="menu" class="menu-section">
+            <div class="section-content">
+                <h2 class="section-title">Our Menu</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-name="Espresso" data-price="3.50">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=350&h=250&fit=crop" alt="Espresso">
+                        <div class="product-info">
+                            <h3>Espresso</h3>
+                            <p class="price">$3.50</p>
+                            <button class="add-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-name="Latte" data-price="4.75">
+                        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?w=350&h=250&fit=crop" alt="Latte">
+                        <div class="product-info">
+                            <h3>Latte</h3>
+                            <p class="price">₹175</p>
+                            <button class="add-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-name="Cappuccino" data-price="4.25">
+                        <img src="burger-frenchfries.png" alt="Burger-frenchfries">
+                        <div class="product-info">
+                            <h3>Burger-Frenchfries</h3>
+                            <p class="price">₹125</p>
+                            <button class="add-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-name="Cold-beverages" data-price="3.00">
+                        <img src="cold-beverages.png" alt="Cold-beverages">
+                        <div class="product-info">
+                            <h3>Cold-Beverages</h3>
+                            <p class="price">₹169</p>
+                            <button class="add-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Section (Testimonials → Cart) -->
+        <section id="order" class="order-section">
+            <div class="section-content">
+                <h2 class="section-title">Your Order</h2>
+                <div class="cart-container">
+                    <div class="cart-summary">
+                        <h3>Cart (<span id="cart-count">0</span> items)</h3>
+                        <div id="cart-items"></div>
+                        <div class="cart-total">
+                            <span>Total: $<span id="cart-total">0.00</span></span>
+                            <button class="checkout-btn">Checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section (Login Modal Style) -->
+        <section id="gallery" class="gallery-section">
+            <div class="section-content">
+                <h2 class="section-title">Gallery</h2>
+                <div class="login-container">
+                    <div class="login-form">
+                        <h3>Member Login</h3>
+                        <form id="loginForm">
+                            <input type="text" id="username" placeholder="Username" required>
+                            <input type="password" id="password" placeholder="Password" required>
+                            <button type="submit">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-content">
+                <h2 class="section-title">Contact Us</h2>
+                <form id="contactForm" class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="section-content">
+            <p>&copy; 2024 Coffee Website | Coding Prasenjeet. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
